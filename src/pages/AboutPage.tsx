@@ -17,10 +17,10 @@ const values = [
 ];
 
 const team = [
-    { name: "Managing Director", role: "Leadership & Strategy", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&h=800&auto=format&fit=crop", bio: "Provides strategic vision and overall leadership for Privamax Security across Kenya." },
-    { name: "Operations Manager", role: "Operations & Logistics", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&h=800&auto=format&fit=crop", bio: "Oversees day-to-day deployment, technology installations, and rapid response operations." },
+    { name: "Managing Director", role: "Leadership & Strategy", img: "/assets/generated/team_md.png", bio: "Provides strategic vision and overall leadership for Privamax Security across Kenya." },
+    { name: "Operations Manager", role: "Operations & Logistics", img: "/assets/generated/guards.png", bio: "Oversees day-to-day deployment, technology installations, and rapid response operations." },
     { name: "General Manager", role: "Business Development", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&h=800&auto=format&fit=crop", bio: "Drives business growth through client relationships and strategic partnerships." },
-    { name: "Office Admin", role: "Administration", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&h=800&auto=format&fit=crop", bio: "Manages all administrative functions, client communications, and scheduling." }
+    { name: "Office Admin", role: "Administration", img: "/assets/generated/team_admin.png", bio: "Manages all administrative functions, client communications, and scheduling." }
 ];
 
 const testimonials = [

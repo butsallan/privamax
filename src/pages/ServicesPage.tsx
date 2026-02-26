@@ -13,14 +13,14 @@ const primaryServices = [
         icon: <Camera className="w-8 h-8" />,
         desc: "CCTV cameras provide outstanding security to all. New technology can detect movements and send instant alerts. Combined with remote monitoring, they deliver an unmatched level of protection for your home or business.",
         features: ["HD & 4K resolution", "Night vision", "Motion detection alerts", "Remote smartphone access", "Cloud & local storage"],
-        img: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800&auto=format&fit=crop"
+        img: "/assets/generated/cctv.png"
     },
     {
         title: "Electric Fence",
         icon: <Zap className="w-8 h-8" />,
         desc: "The best perimeter protection for your premise. Entry is restricted to designated areas only. Razor wires can be added to reduce the chances of unauthorised access even further.",
         features: ["High-voltage deterrent", "Tamper-proof sensors", "Razor wire integration", "SMS/App alerts", "Solar-powered options"],
-        img: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=800&auto=format&fit=crop"
+        img: "/assets/generated/fence.png"
     },
     {
         title: "Fire Alarm Systems",
