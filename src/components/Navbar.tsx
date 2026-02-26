@@ -4,9 +4,10 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { label: "About", href: "/about" },
+  { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Contact", href: "/contact" }
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -47,7 +48,6 @@ export default function Navbar() {
           />
         </Link>
 
-
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((item) => (
@@ -62,14 +62,15 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
-          <a
-            href="tel:+254794164662"
+          <Link
+            to="/quote"
             className="bg-brand-secondary text-brand-dark px-6 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2 hover:brightness-110 transition-all group cursor-pointer glow-gold"
           >
             Get a Quote
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
+
 
         {/* Mobile Toggle */}
         <button

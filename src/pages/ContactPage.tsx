@@ -5,14 +5,25 @@ import { Phone, Mail, MapPin, Clock, Send, Shield, Facebook, Instagram, Twitter,
 const contactInfo = [
     { icon: <Phone className="w-6 h-6" />, label: "Phone", value: "+254 794 164 662", href: "tel:+254794164662" },
     { icon: <Phone className="w-6 h-6" />, label: "Landline", value: "+254 202 070 031", href: "tel:+254202070031" },
-    { icon: <MapPin className="w-6 h-6" />, label: "Location", value: "Nairobi, Kenya", href: "https://maps.google.com/?q=Nairobi+Kenya" },
+    { icon: <Mail className="w-6 h-6" />, label: "Email", value: "info@privamaxsecurity.co.ke", href: "mailto:info@privamaxsecurity.co.ke" },
+    { icon: <Mail className="w-6 h-6" />, label: "Support Email", value: "help@privamaxsecurity.co.ke", href: "mailto:help@privamaxsecurity.co.ke" },
+    { icon: <MapPin className="w-6 h-6" />, label: "Address", value: "Ndemi Road, Kilimani, MNG Offices, Nairobi", href: "https://maps.google.com/?q=Ndemi+Road+Kilimani+Nairobi+Kenya" },
     { icon: <Clock className="w-6 h-6" />, label: "Hours", value: "24/7 — Always available", href: undefined }
 ];
 
 const socials = [
     { icon: <Twitter className="w-5 h-5" />, label: "Twitter", href: "https://twitter.com/PrivamaxS" },
     { icon: <Facebook className="w-5 h-5" />, label: "Facebook", href: "https://www.facebook.com/profile.php?id=100094909293959" },
-    { icon: <Instagram className="w-5 h-5" />, label: "Instagram", href: "https://instagram.com/privamaxsecurityke" }
+    { icon: <Instagram className="w-5 h-5" />, label: "Instagram", href: "https://instagram.com/privamaxsecurityke" },
+    {
+        icon: (
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.58a8.2 8.2 0 0 0 4.79 1.53V6.66a4.85 4.85 0 0 1-1.02.03z" />
+            </svg>
+        ),
+        label: "TikTok",
+        href: "https://www.tiktok.com/@privamaxsecurityke"
+    }
 ];
 
 const faqs = [
@@ -41,7 +52,7 @@ export default function ContactPage() {
                         </div>
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[1.1] mb-6">
                             Let's secure{" "}
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">your property</span>
+                            <span className="text-brand-secondary">your property</span>
                         </h1>
                         <p className="text-xl text-white/60 font-body leading-relaxed max-w-2xl">
                             Get in touch for a free security consultation, site survey, or emergency response. We're available 24/7.
@@ -134,7 +145,7 @@ export default function ContactPage() {
                                         <label htmlFor="contact-message" className="block text-sm font-semibold text-brand-dark mb-2">Message *</label>
                                         <textarea id="contact-message" required rows={5} placeholder="Tell us about your security needs..." className="w-full bg-brand-bg border border-gray-200 rounded-xl px-5 py-4 text-brand-dark font-body focus:outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 transition-all resize-none" />
                                     </div>
-                                    <button type="submit" className="w-full sm:w-auto bg-brand-primary text-white px-10 py-5 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-brand-dark transition-all cursor-pointer glow-blue group">
+                                    <button type="submit" className="w-full sm:w-auto bg-brand-secondary text-brand-dark px-10 py-5 rounded-full font-bold flex items-center justify-center gap-3 hover:brightness-110 transition-all cursor-pointer group">
                                         <Send className="w-5 h-5" />
                                         Send Message
                                     </button>
@@ -235,7 +246,7 @@ export default function ContactPage() {
                 <div className="absolute inset-0 tech-grid opacity-10" />
                 <div className="container-custom relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
                     <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 bg-brand-primary rounded-2xl flex items-center justify-center glow-blue">
+                        <div className="w-14 h-14 bg-brand-secondary/20 rounded-2xl flex items-center justify-center">
                             <Shield className="w-7 h-7 text-white" />
                         </div>
                         <div>
@@ -243,9 +254,14 @@ export default function ContactPage() {
                             <p className="text-white/50 font-body">Your Security Is Our Priority</p>
                         </div>
                     </div>
-                    <a href="https://privamaxsecurity.co.ke/appointment" target="_blank" rel="noopener noreferrer" className="bg-brand-primary text-white px-10 py-5 rounded-full font-bold hover:bg-brand-secondary transition-all cursor-pointer glow-blue flex items-center gap-2">
+                    <button
+                        data-cal-link="privamax-ke/30min"
+                        data-cal-namespace="30min"
+                        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'
+                        className="bg-brand-secondary text-brand-dark px-10 py-5 rounded-full font-bold hover:brightness-110 transition-all cursor-pointer flex items-center gap-2"
+                    >
                         Book Appointment Online <ArrowUpRight className="w-5 h-5" />
-                    </a>
+                    </button>
                 </div>
             </section>
         </div>

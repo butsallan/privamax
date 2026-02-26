@@ -126,7 +126,7 @@ export default function ServicesPage() {
                         </div>
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[1.1] mb-6">
                             Comprehensive security{" "}
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">
+                            <span className="text-brand-secondary">
                                 solutions
                             </span>
                         </h1>
@@ -294,7 +294,7 @@ export default function ServicesPage() {
                         </p>
                     </div>
                     <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-                        <a href="tel:+254794164662" className="bg-brand-primary text-white px-10 py-5 rounded-full font-bold hover:bg-brand-secondary transition-all cursor-pointer glow-blue flex items-center gap-2">
+                        <a href="tel:+254794164662" className="bg-brand-secondary text-brand-dark px-10 py-5 rounded-full font-bold hover:brightness-110 transition-all cursor-pointer flex items-center gap-2">
                             <Phone className="w-5 h-5" /> Call Now
                         </a>
                         <Link to="/contact" className="glass text-white px-10 py-5 rounded-full font-bold hover:bg-white/20 transition-all cursor-pointer text-center">

@@ -34,53 +34,6 @@ export default function App() {
         <About />
         <Services />
 
-        {/* Team Section */}
-        <section id="team" className="section-padding bg-white">
-          <div className="container-custom">
-            <div className="grid lg:grid-cols-2 gap-20 items-end mb-20">
-              <div className="space-y-8">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-[1px] bg-brand-primary" />
-                  <span className="text-sm font-bold uppercase tracking-widest text-brand-primary">Our Team</span>
-                </div>
-                <h2 className="text-4xl md:text-5xl text-brand-dark leading-tight">
-                  Expert professionals dedicated to your safety
-                </h2>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-4 gap-6">
-              {[
-                { name: "Managing Director", role: "Leadership & Strategy", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&h=800&auto=format&fit=crop" },
-                { name: "Operations Manager", role: "Operations & Logistics", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&h=800&auto=format&fit=crop" },
-                { name: "General Manager", role: "Business Development", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&h=800&auto=format&fit=crop" },
-                { name: "Office Admin", role: "Administration", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&h=800&auto=format&fit=crop" }
-              ].map((member, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="group cursor-pointer"
-                >
-                  <div className="relative overflow-hidden rounded-2xl mb-6 aspect-[4/5]">
-                    <img
-                      src={member.img}
-                      alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                  <h4 className="text-xl font-bold text-brand-dark mb-1">{member.name}</h4>
-                  <p className="text-gray-500 font-body text-sm">{member.role}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <Pricing />
 
         {/* Testimonials Section */}
@@ -167,14 +120,14 @@ export default function App() {
                 >
                   Call +254 794 164 662
                 </a>
-                <a
-                  href="https://privamaxsecurity.co.ke/appointment"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  data-cal-link="privamax-ke/30min"
+                  data-cal-namespace="30min"
+                  data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'
                   className="glass text-white px-12 py-6 rounded-full text-xl font-semibold hover:bg-white/20 transition-all cursor-pointer"
                 >
                   Book Appointment
-                </a>
+                </button>
               </div>
             </motion.div>
           </div>
