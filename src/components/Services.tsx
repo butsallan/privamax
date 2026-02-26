@@ -1,98 +1,127 @@
 import { motion } from "motion/react";
-import { PieChart, BarChart3, Landmark, Calculator, ArrowRight, ShieldCheck, ArrowUpRight } from "lucide-react";
+import { Camera, Zap, Flame, Lock, Shield, Search, Dog, DoorOpen, ArrowUpRight } from "lucide-react";
 
 const services = [
   {
-    title: "Financial Planning and Strategy",
-    icon: <PieChart className="w-8 h-8" />,
-    desc: "Comprehensive roadmaps for long-term wealth and business stability."
+    title: "CCTV Cameras",
+    icon: <Camera className="w-7 h-7" />,
+    desc: "HD surveillance systems with motion detection and instant alerts for total property monitoring."
   },
   {
-    title: "Tax Optimization and Compliance",
-    icon: <Calculator className="w-8 h-8" />,
-    desc: "Strategic tax planning to minimize liabilities and ensure full compliance."
+    title: "Electric Fence",
+    icon: <Zap className="w-7 h-7" />,
+    desc: "Premium perimeter protection ensuring entry only at designated areas. Razor wires included."
   },
   {
-    title: "Risk Management and Investment",
-    icon: <ShieldCheck className="w-8 h-8" />,
-    desc: "Protecting your assets while identifying high-growth opportunities."
+    title: "Fire Alarm Systems",
+    icon: <Flame className="w-7 h-7" />,
+    desc: "Active fire detection systems providing early warning, evacuation alerts, and automatic suppression."
   },
   {
-    title: "Strategic Mergers Advisory",
-    icon: <Landmark className="w-8 h-8" />,
-    desc: "Expert guidance through acquisitions and business transitions."
+    title: "Access Control",
+    icon: <Lock className="w-7 h-7" />,
+    desc: "Biometric access, smart locks, and automated gate systems for controlled entry and exit."
+  },
+  {
+    title: "Security Guards",
+    icon: <Shield className="w-7 h-7" />,
+    desc: "Certified, well-trained security officers for on-site guarding, mobile patrols, and event security."
+  },
+  {
+    title: "Private Investigation",
+    icon: <Search className="w-7 h-7" />,
+    desc: "Skilled investigators providing tangible evidence through surveillance, background checks, and forensics."
+  },
+  {
+    title: "Dog Security Service",
+    icon: <Dog className="w-7 h-7" />,
+    desc: "Professionally trained security dogs for property patrol, detection, and rapid-response protection."
+  },
+  {
+    title: "Automatic Gates",
+    icon: <DoorOpen className="w-7 h-7" />,
+    desc: "Remote-controlled gate systems with smart device integration for enhanced home and office access."
   }
 ];
 
 export default function Services() {
   return (
     <section id="services" className="section-padding bg-white relative overflow-hidden">
-      {/* Decorative background element */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-bg -z-0 rounded-l-[100px] hidden lg:block" />
-      
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="space-y-10"
-          >
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-[1px] bg-brand-dark" />
-                <span className="text-sm font-bold uppercase tracking-widest text-brand-dark">Tailored Solutions</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl text-brand-dark leading-tight">
-                Our expertise, <br /> your success
-              </h2>
-              <p className="text-lg text-gray-600 font-body leading-relaxed max-w-md">
-                We offer a comprehensive range of financial services designed to help your business grow, stay compliant, and thrive in any market.
-              </p>
-            </div>
-            
-            <div className="relative group overflow-hidden rounded-3xl">
-              <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2022&auto=format&fit=crop"
-                alt="Accounting"
-                className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/10 transition-colors" />
-            </div>
-
-            <button className="bg-brand-primary text-white px-10 py-5 rounded-full font-bold flex items-center gap-3 hover:bg-brand-dark transition-all group">
-              Explore all services
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </motion.div>
-
-          <div className="space-y-2">
-            {services.map((s, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group p-8 border-b border-gray-200 flex items-center justify-between hover:bg-white hover:shadow-xl hover:rounded-2xl hover:border-transparent transition-all cursor-pointer"
-              >
-                <div className="flex items-center gap-8">
-                  <div className="text-brand-primary group-hover:scale-110 transition-transform">
-                    {s.icon}
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-bold text-brand-dark mb-2">{s.title}</h4>
-                    <p className="text-gray-500 font-body text-sm max-w-sm">{s.desc}</p>
-                  </div>
-                </div>
-                <div className="w-12 h-12 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center group-hover:bg-brand-primary group-hover:text-white transition-all">
-                  <ArrowUpRight className="w-5 h-5" />
-                </div>
-              </motion.div>
-            ))}
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center max-w-3xl mx-auto mb-20"
+        >
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="w-10 h-[1px] bg-brand-primary" />
+            <span className="text-sm font-bold uppercase tracking-widest text-brand-primary">Our Services</span>
+            <div className="w-10 h-[1px] bg-brand-primary" />
           </div>
+          <h2 className="text-4xl md:text-5xl text-brand-dark leading-tight mb-6">
+            Comprehensive security solutions for Kenya
+          </h2>
+          <p className="text-lg text-gray-600 font-body leading-relaxed">
+            We offer fast, professional, and exceptional security services — from electronic systems
+            and physical guarding to cyber security and private investigations.
+          </p>
+        </motion.div>
+
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((s, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              className="group p-8 rounded-2xl border border-gray-100 bg-white hover:bg-brand-dark hover:border-brand-dark transition-all duration-300 cursor-pointer relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-brand-primary/5 rounded-bl-full group-hover:bg-brand-primary/10 transition-colors" />
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-brand-bg rounded-2xl flex items-center justify-center text-brand-primary mb-6 group-hover:bg-brand-primary group-hover:text-white transition-all">
+                  {s.icon}
+                </div>
+                <h4 className="text-lg font-bold text-brand-dark mb-3 group-hover:text-white transition-colors">
+                  {s.title}
+                </h4>
+                <p className="text-gray-500 font-body text-sm leading-relaxed group-hover:text-white/70 transition-colors mb-6">
+                  {s.desc}
+                </p>
+                <div className="flex items-center gap-2 text-brand-primary text-sm font-semibold group-hover:text-brand-secondary transition-colors">
+                  Learn more
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
+
+        {/* Additional Services Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16 bg-brand-bg rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-8"
+        >
+          <div>
+            <h3 className="text-2xl font-bold text-brand-dark mb-2">
+              Also Available
+            </h3>
+            <p className="text-gray-600 font-body">
+              Cyber Security • Close Protection • Security Audits • Alarm Response • Asset Tracking • Security Consulting
+            </p>
+          </div>
+          <a
+            href="tel:+254794164662"
+            className="bg-brand-primary text-white px-8 py-4 rounded-full font-bold hover:bg-brand-dark transition-all whitespace-nowrap cursor-pointer glow-blue"
+          >
+            Request a Quote
+          </a>
+        </motion.div>
       </div>
     </section>
   );

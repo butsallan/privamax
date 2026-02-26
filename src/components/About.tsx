@@ -1,30 +1,30 @@
 import { motion } from "motion/react";
-import { TrendingUp, ShieldCheck, Award, Globe, ArrowRight } from "lucide-react";
+import { ShieldCheck, Eye, Clock, Users, ArrowRight } from "lucide-react";
 
 const features = [
   {
-    icon: <TrendingUp className="w-6 h-6" />,
-    title: "Personalized Strategies",
-    desc: "We craft financial solutions based on your unique goals and industry needs.",
+    icon: <ShieldCheck className="w-6 h-6" />,
+    title: "Certified Professionals",
+    desc: "All our officers meet minimum standards of training and are continually developed.",
     num: "01"
   },
   {
-    icon: <ShieldCheck className="w-6 h-6" />,
-    title: "Transparent Processes",
-    desc: "Clear, honest, and genuinely data-driven insights for better decision-making.",
+    icon: <Eye className="w-6 h-6" />,
+    title: "Latest Technology",
+    desc: "We deploy modern surveillance, access control, and cyber security systems.",
     num: "02"
   },
   {
-    icon: <Award className="w-6 h-6" />,
-    title: "Proven Track Record",
-    desc: "Extensive experience in helping businesses achieve sustainable growth.",
+    icon: <Clock className="w-6 h-6" />,
+    title: "24/7 Rapid Response",
+    desc: "Our response teams are well-equipped and available around the clock at your request.",
     num: "03"
   }
 ];
 
 export default function About() {
   return (
-    <section id="about-us" className="section-padding bg-brand-bg">
+    <section id="about" className="section-padding bg-brand-bg tech-grid">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-20 items-start">
           <motion.div
@@ -34,22 +34,27 @@ export default function About() {
             className="space-y-8"
           >
             <div className="flex items-center gap-4">
-              <div className="w-10 h-[1px] bg-brand-dark" />
-              <span className="text-sm font-bold uppercase tracking-widest text-brand-dark">About Us</span>
+              <div className="w-10 h-[1px] bg-brand-primary" />
+              <span className="text-sm font-bold uppercase tracking-widest text-brand-primary">About Us</span>
             </div>
             <h2 className="text-4xl md:text-5xl text-brand-dark leading-tight">
-              At Finovo, we help businesses navigate complex finances with confidence.
+              Kenya's trusted security partner since 2016
             </h2>
             <p className="text-lg text-gray-600 font-body leading-relaxed">
-              With years of experience and a truly client-focused approach, we empower businesses to unlock new opportunities and achieve financial stability.
+              Privamax Security was founded in 2016 and incorporated in Kenya on 21st May 2020 as a Limited Company.
+              We provide customized security solutions to help protect your family, property, and business —
+              delivering quality and timely services by focusing on productivity, customer care, and continuous improvement.
             </p>
-            <button className="bg-brand-primary text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-brand-dark transition-all group">
-              About company
+            <a
+              href="#services"
+              className="bg-brand-primary text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-brand-dark transition-all group w-fit cursor-pointer"
+            >
+              Our Services
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </motion.div>
 
-          <div className="space-y-6">
+          <div className="space-y-5">
             {features.map((f, i) => (
               <motion.div
                 key={i}
@@ -57,10 +62,10 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex items-center justify-between p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group"
+                className="flex items-center justify-between p-7 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-brand-primary/20 transition-all group cursor-pointer"
               >
                 <div className="flex items-center gap-6">
-                  <div className="w-12 h-12 bg-brand-dark text-white rounded-full flex items-center justify-center font-display font-bold">
+                  <div className="w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-display font-bold text-sm shrink-0">
                     {f.num}
                   </div>
                   <div>
@@ -73,38 +78,27 @@ export default function About() {
           </div>
         </div>
 
-        {/* Global Trust Section */}
+        {/* Trust / Reach Section */}
         <div className="mt-32 grid lg:grid-cols-2 gap-20 items-center">
-           <motion.div
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative rounded-3xl overflow-hidden"
           >
             <img
-              src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=2070&auto=format&fit=crop"
-              alt="Global Map"
-              className="w-full h-auto opacity-20"
+              src="https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2080&auto=format&fit=crop"
+              alt="Security professional monitoring CCTV in control room"
+              className="w-full h-[450px] object-cover"
               referrerPolicy="no-referrer"
             />
-            {/* Floating Avatars */}
-            {[
-              { top: '20%', left: '15%' },
-              { top: '60%', left: '40%' },
-              { top: '30%', right: '20%' },
-              { bottom: '20%', right: '10%' }
-            ].map((pos, i) => (
-              <motion.img
-                key={i}
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
-                src={`https://picsum.photos/seed/${i + 50}/100/100`}
-                className="absolute w-12 h-12 rounded-full border-2 border-white shadow-lg"
-                style={pos}
-                alt="Client"
-                referrerPolicy="no-referrer"
-              />
-            ))}
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6">
+              <div className="glass rounded-2xl p-6 flex items-center gap-4">
+                <div className="w-3 h-3 bg-brand-accent rounded-full animate-pulse" />
+                <span className="text-white font-semibold text-sm">Live monitoring — 24/7 response team active</span>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -114,23 +108,30 @@ export default function About() {
             className="space-y-8"
           >
             <div className="flex items-center gap-4">
-              <div className="w-10 h-[1px] bg-brand-dark" />
-              <span className="text-sm font-bold uppercase tracking-widest text-brand-dark">Global Trust</span>
+              <div className="w-10 h-[1px] bg-brand-primary" />
+              <span className="text-sm font-bold uppercase tracking-widest text-brand-primary">Why Choose Us</span>
             </div>
             <h2 className="text-4xl md:text-5xl text-brand-dark leading-tight">
-              Our valued clients around the world
+              Delivering the best security solutions to our clients
             </h2>
             <p className="text-lg text-gray-600 font-body leading-relaxed">
-              Discover the global reach of our financial expertise. We proudly serve businesses across multiple regions, helping them achieve financial success with tailored solutions.
+              Our security officers, technicians, and response teams are well equipped with the latest modern
+              technology and are available 24/7 at your request. We serve homes, corporate businesses, and
+              high-net-worth individuals across Kenya.
             </p>
             <div className="grid grid-cols-2 gap-8 pt-4">
               <div>
-                <div className="text-4xl font-display font-bold text-brand-dark">98%</div>
-                <div className="text-sm text-gray-500 font-body mt-1">Satisfied Clients</div>
+                <div className="text-4xl font-display font-bold text-brand-primary">98%</div>
+                <div className="text-sm text-gray-500 font-body mt-1">Client Satisfaction</div>
               </div>
               <div>
-                <div className="text-4xl font-display font-bold text-brand-dark">25+</div>
-                <div className="text-sm text-gray-500 font-body mt-1">Countries Served</div>
+                <div className="text-4xl font-display font-bold text-brand-primary">
+                  <span className="flex items-center gap-1">
+                    <Users className="w-8 h-8" />
+                    500+
+                  </span>
+                </div>
+                <div className="text-sm text-gray-500 font-body mt-1">Installations Completed</div>
               </div>
             </div>
           </motion.div>
