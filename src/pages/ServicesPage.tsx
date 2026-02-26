@@ -27,7 +27,7 @@ const primaryServices = [
         icon: <Flame className="w-8 h-8" />,
         desc: "Active fire detection systems that detect fire or the effects of fire, providing early warning, automatic evacuation alerts, and suppression system activation to protect lives and property.",
         features: ["Smoke & heat detection", "Automatic suppression", "Evacuation alerts", "Emergency lighting", "Compliance certified"],
-        img: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800&auto=format&fit=crop"
+        img: "/assets/generated/fire_alarm.jpg"
     },
     {
         title: "Access Control Systems",
