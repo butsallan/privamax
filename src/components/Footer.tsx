@@ -76,8 +76,8 @@ export default function Footer() {
             <h6 className="font-bold uppercase tracking-widest text-xs text-white/40">Company</h6>
             <ul className="space-y-4 text-white/70 font-body text-sm">
               <li><Link to="/about" className="hover:text-white transition-colors cursor-pointer">About Us</Link></li>
-              <li><Link to="/about" className="hover:text-white transition-colors cursor-pointer">Our Team</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors cursor-pointer">How We Work</Link></li>
+              <li><Link to="/services" className="hover:text-white transition-colors cursor-pointer">Our Solutions</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors cursor-pointer">Contact Us</Link></li>
             </ul>
           </div>
           <div className="space-y-6">
@@ -86,6 +86,7 @@ export default function Footer() {
               <li><Link to="/services" className="hover:text-white transition-colors cursor-pointer">CCTV Installation</Link></li>
               <li><Link to="/services" className="hover:text-white transition-colors cursor-pointer">Security Guards</Link></li>
               <li><Link to="/services" className="hover:text-white transition-colors cursor-pointer">Cyber Security</Link></li>
+              <li><Link to="/services" className="hover:text-white transition-colors cursor-pointer">Access Control</Link></li>
             </ul>
           </div>
           <div className="space-y-6">
@@ -115,10 +116,6 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 shrink-0 text-brand-secondary" />
                 <a href="mailto:info@privamaxsecurity.co.ke" className="hover:text-white transition-colors cursor-pointer">info@privamaxsecurity.co.ke</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 shrink-0 text-brand-secondary" />
-                <a href="mailto:help@privamaxsecurity.co.ke" className="hover:text-white transition-colors cursor-pointer">help@privamaxsecurity.co.ke</a>
               </li>
             </ul>
           </div>

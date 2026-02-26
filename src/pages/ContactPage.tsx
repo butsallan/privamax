@@ -157,14 +157,14 @@ export default function ContactPage() {
                         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-8">
                             <div className="rounded-2xl overflow-hidden h-[350px] border border-gray-100">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.35853743423!2d36.68218858178063!3d-1.3028617923036015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2s!4v1709000000000!5m2!1sen!2s"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8454651831694!2d36.8049544!3d-1.2653014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17208dfe6fdb%3A0xde3bdd43cd215d63!2sPrivamax%20Security!5e0!3m2!1sen!2sug!4v1772111704159!5m2!1sen!2sug"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    title="Privamax Security Location - Nairobi, Kenya"
+                                    title="Privamax Security Location"
                                 />
                             </div>
 
