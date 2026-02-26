@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight, Phone, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -63,13 +64,13 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center gap-6"
           >
-            <a
-              href="#services"
+            <Link
+              to="/services"
               className="w-full sm:w-auto bg-brand-secondary text-brand-dark px-10 py-5 rounded-full text-lg font-bold flex items-center justify-center gap-3 hover:brightness-110 transition-transform shadow-lg shadow-brand-secondary/30 group cursor-pointer glow-gold"
             >
               Explore Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
             <a
               href="tel:+254794164662"
               className="w-full sm:w-auto glass text-white px-10 py-5 rounded-full text-lg font-semibold hover:bg-white/20 transition-all flex items-center justify-center gap-3 cursor-pointer"
@@ -78,6 +79,7 @@ export default function Hero() {
               +254 794 164 662
             </a>
           </motion.div>
+
 
           {/* Stats bar */}
           <motion.div

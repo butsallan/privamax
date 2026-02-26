@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Camera, Zap, Flame, Lock, Shield, Search, Dog, DoorOpen, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -78,24 +79,26 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="group p-8 rounded-2xl border border-gray-100 bg-white hover:bg-brand-dark hover:border-brand-dark transition-all duration-300 cursor-pointer relative overflow-hidden"
+              className="group rounded-2xl border border-gray-100 bg-white hover:bg-brand-dark hover:border-brand-dark transition-all duration-300 relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-24 h-24 bg-brand-primary/5 rounded-bl-full group-hover:bg-brand-primary/10 transition-colors" />
-              <div className="relative z-10">
-                <div className="w-14 h-14 bg-brand-bg rounded-2xl flex items-center justify-center text-brand-primary mb-6 group-hover:bg-brand-primary group-hover:text-white transition-all">
-                  {s.icon}
+              <Link to="/services" className="block p-8 h-full cursor-pointer">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-primary/5 rounded-bl-full group-hover:bg-brand-primary/10 transition-colors" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 bg-brand-bg rounded-2xl flex items-center justify-center text-brand-primary mb-6 group-hover:bg-brand-primary group-hover:text-white transition-all">
+                    {s.icon}
+                  </div>
+                  <h4 className="text-lg font-bold text-brand-dark mb-3 group-hover:text-white transition-colors">
+                    {s.title}
+                  </h4>
+                  <p className="text-gray-500 font-body text-sm leading-relaxed group-hover:text-white/70 transition-colors mb-6">
+                    {s.desc}
+                  </p>
+                  <div className="flex items-center gap-2 text-brand-primary text-sm font-semibold group-hover:text-brand-secondary transition-colors">
+                    Learn more
+                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
                 </div>
-                <h4 className="text-lg font-bold text-brand-dark mb-3 group-hover:text-white transition-colors">
-                  {s.title}
-                </h4>
-                <p className="text-gray-500 font-body text-sm leading-relaxed group-hover:text-white/70 transition-colors mb-6">
-                  {s.desc}
-                </p>
-                <div className="flex items-center gap-2 text-brand-primary text-sm font-semibold group-hover:text-brand-secondary transition-colors">
-                  Learn more
-                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -115,14 +118,15 @@ export default function Services() {
               Cyber Security • Close Protection • Security Audits • Alarm Response • Asset Tracking • Security Consulting
             </p>
           </div>
-          <a
-            href="tel:+254794164662"
+          <Link
+            to="/quote"
             className="bg-brand-primary text-white px-8 py-4 rounded-full font-bold hover:bg-brand-dark transition-all whitespace-nowrap cursor-pointer glow-blue"
           >
             Request a Quote
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
   );
 }
+

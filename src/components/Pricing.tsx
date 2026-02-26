@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Check, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const plans = [
   {
@@ -77,14 +78,14 @@ export default function Pricing() {
                   ))}
                 </ul>
               </div>
-              <a
-                href="tel:+254794164662"
+              <Link
+                to="/quote"
                 className={`w-full py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all cursor-pointer ${plan.dark ? "bg-brand-primary text-white hover:bg-brand-secondary" : "bg-brand-bg text-brand-dark hover:bg-brand-primary hover:text-white"
                   }`}
               >
                 Get a Quote
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -92,3 +93,4 @@ export default function Pricing() {
     </section>
   );
 }
+
